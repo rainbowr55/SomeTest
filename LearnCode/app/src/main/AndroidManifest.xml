@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="learn.rainbow.com.learndemo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.ViewTouchLearnActivity" />
+        <activity android:name=".ThreadLocalDemoActivity" />
+        <activity
+            android:name=".SchemeTestActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="h5.m.taobao.com"
+                    android:path="/ocean/topic.htm"
+                    android:scheme="gg" />
+                <data
+                    android:host="h5.m.taobao.com"
+                    android:path="/ocean/topic.htm"
+                    android:scheme="gg" />
+                <data
+                    android:host="h5.m.taobao.com"
+                    android:path="/bala/topic.htm"
+                    android:scheme="gg" />
+                <data
+                    android:host="h5.m.taobao.com"
+                    android:path="/bala/topic.htm"
+                    android:scheme="gg" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StandActivity"
+            android:launchMode="standard" />
+        <activity
+            android:name=".SingleTaskActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".SingleInstanceActivity"
+            android:taskAffinity=""
+            android:launchMode="singleInstance" />
+        <activity android:name=".SingleTopActivity" android:launchMode="singleTop"/>
+    </application>
+
+</manifest>
